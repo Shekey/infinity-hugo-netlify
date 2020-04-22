@@ -1,5 +1,10 @@
 ---
 title: "Values"
+menu:
+  main:
+    title: Values
+    url: /values/
+    weight: 30
 image: /img/about-jumbotron.jpg
 values:
   - heading: "Shade-grown coffee"

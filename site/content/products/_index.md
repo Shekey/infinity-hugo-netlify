@@ -3,6 +3,11 @@ title: Our Coffee
 type: products
 image: /img/products-jumbotron.jpg
 heading: What we offer
+menu:
+  main:
+    title: Products
+    url: /products/
+    weight: 10
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
