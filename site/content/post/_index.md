@@ -2,6 +2,6 @@
 menu:
   main:
     title: Blog
-    url: /posts/
+    url: /post/
     weight: 20
 ---
