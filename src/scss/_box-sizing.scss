@@ -1,0 +1,13 @@
+/*
+ *
+ * BOX SIZING
+
+html, body, div, article, section, main, footer, header, form, fieldset, pre, code, p, ul, ol, li, dl, dt, dd, textarea
+  box-sizing: border-box
+
+input
+  &[type="email"], &[type="number"], &[type="password"], &[type="tel"], &[type="text"], &[type="url"]
+    box-sizing: border-box
+
+.border-box
+  box-sizing: border-box

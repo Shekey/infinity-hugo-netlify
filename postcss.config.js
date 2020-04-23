@@ -1,10 +1,8 @@
-module.exports = {
+module.exports = ({file, options, env}) => ({
+  parser: file.extname === ".sss" ? "sugarss" : false,
   plugins: {
-    "postcss-import": {},
-    "postcss-preset-env": {
-      browsers: "last 2 versions"
-    },
-    "postcss-custom-media": {},
-    autoprefixer: {}
+    "postcss-import": {root: file.dirname},
+    "postcss-preset-env": options["postcss-preset-env"] ? options["postcss-preset-env"] : false,
+    "cssnano": env === "production" ? options.cssnano : false
   }
-};
+});
