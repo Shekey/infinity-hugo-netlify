@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div class="test">
+  <div class="test__grid">
+    {{ range $index, $element := .Params.intro.items }}
+    <div class="item">
+      <a href="{{ $element.link }}"
+        class="masonry-card">
+        <picture>
+          <source media="(max-width: 767px)"
+            srcset="{{ $element.image }}?nf_resize=smartcrop&amp;w=750&amp;h=869">
+          <source media="(min-width: 768px)"
+            srcset="{{ $element.image }}?nf_resize=smartcrop&amp;w=545&amp;h=570">
+          <img class="masonry-card__thumb"
+            src="{{ $element.image }}" alt=""></picture>
+        <div class="masonry-card__title">{{ $element.title }}</div>
+        <div class="button">{{ $element.btnText }}</div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+
+{{ end }}

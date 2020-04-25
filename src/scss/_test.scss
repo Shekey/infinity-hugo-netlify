@@ -1,0 +1,87 @@
+.test {
+    &__grid {
+        display: grid;
+        margin: 0 auto;
+        grid-gap: 20px 20px;
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(12, 1fr);
+        margin-bottom: 60px;
+        height: calc(100vh - 62px);
+    }
+    
+    .item {
+        grid-column: span 6;
+
+        &:nth-of-type(2n+1) {
+            grid-row: span 2;
+
+            .masonry-card {
+                &::after {
+                    right: 0;
+                    left: auto;
+                    background-image: linear-gradient(90deg,rgba(28,33,35,0) 40%,#1c2123 95%);
+                }
+            }
+        }
+
+        .masonry-card {
+            position: relative;
+            border-bottom: 4px solid #cf0000;
+            padding: 20px;
+            min-height: calc(25vh - 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            box-shadow: 0 28px 30px -20px #68858e;
+            height: calc(100%);
+            text-decoration: none;
+            align-self: baseline;
+            box-sizing: border-box;
+            z-index: 1;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                background-image: linear-gradient(-90deg,rgba(28,33,35,0) 40%,#1c2123 95%);
+            }
+        }
+
+        .masonry-card__thumb {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .masonry-card__title {
+            font-size: 28px;
+            line-height: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #cf0000;
+            min-width: 170px;
+            text-align: center;
+            color: #fff;
+            padding: 13.5px 26px;
+            font-size: 20px;
+            line-height: 18px;
+            text-transform: uppercase;
+            align-self: baseline;
+            z-index: 1;
+            position: relative;
+        }
+    }
+}
