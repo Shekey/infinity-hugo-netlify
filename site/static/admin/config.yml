@@ -84,11 +84,5 @@ collections: # A list of collections the CMS should be able to edit
         label: "Test Page"
         name: "test-page"
         fields:
-          - {label: Intro, name: intro, widget: object, 
-            {label: Items, name: items, widget: list, 
-              fields: [
-                {label: Image, name: image, widget: image}, {label: Title, name: title, widget: text},
-                {label: Link, name: link, widget: text},
-                {label: Button text, name: btnText, widget: text}]}
-              ]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Items, name: items, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: text},{label: Link, name: link, widget: text},{label: Button text, name: btnText, widget: text}]}]}
 
