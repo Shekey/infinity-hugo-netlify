@@ -44,24 +44,25 @@ emailjs.init("user_c75ZQ5mUcKmKtLlmZeub4");
 //     });
 // }
 
-testForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  // const actionUrl = testForm.getAttribute("action");
-  // sendNetlifyRequest(actionUrl);
-  let stringConcat = "{ ";
-  var data = new FormData(testForm);
-  for (const [name, value] of data) {
-    stringConcat += `"${name}" : "${value}",`;
-  }
-  let paramsJson = stringConcat.slice(0, -1);
-  paramsJson += "}";
-  const JSONParams =  JSON.parse(paramsJson);
-  console.log(JSONParams);
-  emailjs.send("gmail", "template_oCYmOotE",  JSONParams)
-    .then(function(response) {
-      console.log("SUCCESS!", response.status, response.text);
-    }, function(error) {
-      console.log("FAILED...", error);
-    });
-});
-
+if (testForm) {
+  testForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // const actionUrl = testForm.getAttribute("action");
+    // sendNetlifyRequest(actionUrl);
+    let stringConcat = "{ ";
+    var data = new FormData(testForm);
+    for (const [name, value] of data) {
+      stringConcat += `"${name}" : "${value}",`;
+    }
+    let paramsJson = stringConcat.slice(0, -1);
+    paramsJson += "}";
+    const JSONParams =  JSON.parse(paramsJson);
+    console.log(JSONParams);
+    emailjs.send("gmail", "template_oCYmOotE",  JSONParams)
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+      }, function(error) {
+        console.log("FAILED...", error);
+      });
+  });
+}
