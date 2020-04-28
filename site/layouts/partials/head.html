@@ -14,6 +14,16 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+	{{ $main := resources.Get "vendor-css/main.css" }}
+	{{ $vendors := readDir "assets/vendor-css" }}
+	{{ range $vendors }}
+		{{ $component := resources.Get (printf "vendor-css/%s" .Name) }}
+		{{ $main = slice $component $main | resources.Concat .Name}}
+	{{ end }}
+	{{ $main := $main | minify  }}
+	<link rel="stylesheet" href="{{ $main.Permalink }}">
+
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">

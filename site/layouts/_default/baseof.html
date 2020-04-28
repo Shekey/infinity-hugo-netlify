@@ -14,4 +14,12 @@
       <script src="{{ relURL . }}"></script>
     {{ end }}
   </body>
+
+  {{ $main := resources.Get "vendor-js/main.js" }}
+  {{ $vendors := readDir "assets/vendor-js" }}
+  {{ range $vendors }}
+    {{ $component := resources.Get (printf "vendor-js/%s" .Name) }}
+  {{ $main = slice $component $main | resources.Concat .Name}}
+  {{ end }}
+  <script src="{{ $main.Permalink }}"></script>
 </html>

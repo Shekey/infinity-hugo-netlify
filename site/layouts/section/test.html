@@ -20,6 +20,14 @@
     {{ end }}
   </div>
 </div>
+
+<div class="pages">
+  {{ range .CurrentSection.Pages }}
+  <a href="{{ .Permalink }}">{{ .Title }}</a> 
+  {{ end }}
+</div>
+
+
 <div class="mw7 center pt3 mb4">
   <form
     action="/test"
