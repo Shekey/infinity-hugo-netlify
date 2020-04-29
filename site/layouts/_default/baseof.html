@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
-  <body class="sans-serif">
+  <body id="top">
 
-    {{ block "header" . }}{{ partial "nav" . }}{{end}}
+    {{ partial "header" . }}
 
     {{ block "main" . }}{{ end }}
 
@@ -13,13 +13,25 @@
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>
     {{ end }}
+
+    <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
   </body>
 
+  {{ $jQuery := resources.Get "jQuery/jquery-2.1.3.min.js" }}
+  <script src="{{ $jQuery.Permalink }}"></script>
+
+  {{ $plugins := resources.Get "scriptsHead/plugins.js" }}
+  <script src="{{ $plugins.Permalink }}"></script>
+
   {{ $main := resources.Get "vendor-js/main.js" }}
-  {{ $vendors := readDir "assets/vendor-js" }}
+  <script src="{{ $main.Permalink }}"></script>
+
+  <!-- {{ $vendors := readDir "assets/vendor-js" }}
   {{ range $vendors }}
     {{ $component := resources.Get (printf "vendor-js/%s" .Name) }}
   {{ $main = slice $component $main | resources.Concat .Name}}
   {{ end }}
-  <script src="{{ $main.Permalink }}"></script>
+  <script src="{{ $main.Permalink }}"></script> -->
 </html>

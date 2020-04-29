@@ -1,53 +1,75 @@
-<footer class="bg-black ph3 pv4 white">
+<footer>
+	<div class="footer-main">
 
-	<div class="mw7 center pt3">
+	  <div class="row">  
 
-		<div class="measure-narrow center mb4">
+		 <div class="col-five tab-full footer-about">       
 
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
+		   <h4 class="h05">Infinity.</h4>
 
-			{{ partial "newsletter-form" . }}
+		   <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus.</p>	            
 
-		</div>
+		 </div> <!-- end footer-about -->
 
-		<div class="flex-ns justify-between">
+		 <div class="col-three tab-full footer-social">
 
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
+			 <h4 class="h05">Follow Us.</h4>
 
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
-			</div>
+			 <ul class="list-links">
+				 <li><a href="#">Facebook</a></li>
+				   <li><a href="#">Twitter</a></li>
+				   <li><a href="#">Instagram</a></li>
+				   <li><a href="#">Behance</a></li>
+				   <li><a href="#">Dribble</a></li>						
+			   </ul>
 
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo") }}
-				</ul>
-			</div>
+		 </div> <!-- end footer-social -->  
 
-		</div>
-	</div>
+		 <div class="col-four tab-full footer-subscribe end">
 
+			 <h4 class="h05">Get Notified.</h4>
+
+			 <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa.</p>
+
+			 <div class="subscribe-form">
+		 
+				 <form id="mc-form" class="group" novalidate="true">
+
+					   <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email" required=""> 
+		  
+					  <!-- <input type="submit" name="subscribe" > -->
+					  <button><i class="icon-mail"></i></button>
+		  
+					  <label for="mc-email" class="subscribe-message"></label>
+	   
+				   </form>
+
+			 </div>
+						
+		 </div> <!-- end footer-subscribe -->      	    
+
+	 </div> <!-- end row -->
+
+  </div> <!-- end footer-main -->
+
+  <div class="footer-bottom">
+
+	 <div class="row">
+
+		 <div class="col-twelve">
+			 <div class="copyright">
+				<span>© Copyright Infinity 2016.</span> 
+				<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	
+			</div>		               
+		 </div>
+
+	 </div>   	
+
+ </div> <!-- end footer-bottom -->
+
+ <div id="go-top">
+	  <a class="smoothscroll" title="Back to Top" href="#top">
+		  <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+	  </a>
+   </div>		
 </footer>
-
-{{ partial "svg" . }}
-
-<script src="/app.js"></script>

@@ -1,7 +1,7 @@
 ---
 title: This is for real test!
 type: test
-image: /img/products-jumbotron.jpg
+image: /images/products-jumbotron.jpg
 heading: Is this testing page?
 menu:
   main:
@@ -10,19 +10,19 @@ menu:
     weight: 50
 intro:
   items:
-    - image: /img/test2.jpg
+    - image: /images/test2.jpg
       link: https://google.com
       title: What to do next?
       btnText: Is this for real?
-    - image: /img/test3.jpg
+    - image: /images/test3.jpg
       link: https://google.com
       title: What to do next?
       btnText: Is this for real?
-    - image: /img/test4.jpg
+    - image: /images/test4.jpg
       link: https://google.com
       title: What to do next?
       btnText: Is this for real?
-    - image: /img/test1.jpg
+    - image: /images/test1.jpg
       link: https://google.com
       title: What to do next?
       btnText: Is this for real?

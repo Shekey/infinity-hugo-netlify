@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-logo: "/img/logo.svg"
+logo: "/images/logo.svg"
 menu:
   main:
     title: Contact
