@@ -11,7 +11,7 @@ collections: # A list of collections the CMS should be able to edit
     format: yaml-frontmatter
     label: "Hero"
     label_singular: "article (hero)"
-    folder: "site/content/hero.md"
+    file: "site/content/hero.md"
     create: true
     editor:
       preview: false
