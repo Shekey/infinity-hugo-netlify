@@ -1,9 +1,7 @@
 ---
 site_title: Infinity
-title: >-
-    We Craft Stunning <br>
-    Digital Experiences.
-we_are_who: we are infinity 
+title: We Craft Stunning <br> Digital Experiences.
+we_are_who: we are infinity
 button_text: Learn more
 headless: true
 social_icons:
@@ -21,23 +19,25 @@ social_icons:
     class: fa fa-behance
   - title: dribble
     url: https://dribbble.com/
-    class: fa fa-dribbble 
-nav_items: 
+    class: fa fa-dribbble
+nav_items:
   - title: Home
-    url: '#home'
+    url: "#home"
     isCurrent: true
   - title: About
-    url: '#about'
+    url: "#about"
     isCurrent: false
   - title: Services
-    url: '#services'
+    url: "#services"
     isCurrent: false
   - title: Works
-    url: '#portfolio'
+    url: "#portfolio"
     isCurrent: false
   - title: Contacts
-    url: '#contact'
+    url: "#contact"
     isCurrent: false
-sponsor_text: >-
-  Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost<a>.Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>
+sponsor_text: Looking for an awesome and reliable webhosting? Try [<a
+  href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost<a>](http://www.dreamhost.com/r.cgi?287326|STYLESHOUT).Get
+  <span>$50 off</span> when you sign up with the promocode
+  <span>styleshout</span>
 ---
