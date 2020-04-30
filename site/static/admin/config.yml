@@ -7,28 +7,30 @@ media_folder: "site/static/images" # Folder where user uploaded files should go
 public_folder: "images"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "hero"
+  - name: "parts"
+    label: "Front page parts"
+    label_singular: "part"
     format: yaml-frontmatter
-    label: "Hero"
-    label_singular: "article (hero)"
-    file: "site/content/hero.md"
-    create: true
     editor:
       preview: false
-    fields:
-      - { label: "Site title", name: "site_title", widget: "string" }
-      - { label: "Title", name: "title", widget: "text" }
-      - { label: "About us title", name: "we_are_who", widget: "string" }
-      - { label: "Button text", name: "button_text", widget: "string" }
-      - { label: "Sponsor", name: "sponsor_text", widget: "markdown" }
-      - {
-          label: "Social icons",
-          name: "social_icons",
-          label_singular: "item",
-          widget: "list",
-          fields:
-            [
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Url", name: "url", widget: "string" },
-            ],
-        }
+    files:
+      - label: "Hero"
+        name: "hero"
+        file: "site/content/hero.md"
+        fields:
+          - { label: "Site title", name: "site_title", widget: "string" }
+          - { label: "Title", name: "title", widget: "text" }
+          - { label: "About us title", name: "we_are_who", widget: "string" }
+          - { label: "Button text", name: "button_text", widget: "string" }
+          - { label: "Sponsor", name: "sponsor_text", widget: "markdown" }
+          - {
+              label: "Social icons",
+              name: "social_icons",
+              label_singular: "item",
+              widget: "list",
+              fields:
+                [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Url", name: "url", widget: "string" },
+                ],
+            }
