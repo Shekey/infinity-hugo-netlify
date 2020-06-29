@@ -1,6 +1,6 @@
 ---
 site_title: Infinity
-title: We Craft Stunning <br> Digital Experiences.
+title: Nihad <br> Digital Experiences.
 we_are_who: we are infinity
 button_text: Learn more
 headless: true
